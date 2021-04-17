@@ -30,22 +30,12 @@ public final class ArrayQueue<T> implements QueueInterface<T> {
 
 	// Question 6:
 	public ArrayQueue(ArrayQueue<T> otherQueue) {
-		this(otherQueue.backIndex + 1);
+		this();
+		int otherLength = otherQueue.queue.length;
 
-		for(int i = frontIndex; i <= otherQueue.backIndex; i++) {
-//			queue[i] = otherQueue.queue[i];
+		for(int i = otherQueue.frontIndex; i != ((otherQueue.backIndex + 1) % otherLength); i = (i + 1) % otherLength) {
 			enqueue(otherQueue.queue[i]);
 		}
-
-		this.frontIndex = otherQueue.frontIndex;
-		this.backIndex = otherQueue.backIndex;
-
-		/*
-		Solution:
-		int otherLength = otherQueue.queue.length;
-		for(int i=otherFront; i !=(otherBack+1)%otherLength; i = (i+1) % otherLength) {
-			enqueue(otherQueue.queue[i]);
-		 */
 	}
 
 	public void enqueue(T newEntry) {
