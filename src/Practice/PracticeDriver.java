@@ -42,7 +42,7 @@ public class PracticeDriver {
 
     // Question 8:
     public static <T> QueueInterface<T> createNewQueue(QueueInterface<T> otherQueue) {
-        QueueInterface<T> copyQueue = new LinkedQueue<T>(); // or these could be Homework.ArrayQueue
+        QueueInterface<T> copyQueue = new LinkedQueue<T>(); // or these could be Homework.Homework.ArrayQueue
 
         while (!copyQueue.isEmpty()) {
             T element = otherQueue.dequeue();

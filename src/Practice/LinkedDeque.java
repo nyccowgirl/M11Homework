@@ -58,7 +58,7 @@ public class LinkedDeque<T> implements DequeInterface<T> {
 	}
 
 	public T removeFront() {
-		T front = getFront(); // Might throw EmptyQueueException
+		T front = getFront(); // Might throw Homework.EmptyQueueException
 							  // assert (firstNode != null);
 		firstNode = firstNode.next;
 
@@ -72,7 +72,7 @@ public class LinkedDeque<T> implements DequeInterface<T> {
 	} 
 
 	public T removeBack() {
-		T back = getBack(); // Might throw EmptyQueueException
+		T back = getBack(); // Might throw Homework.EmptyQueueException
 		  					// assert (lastNode != null);
 		lastNode = lastNode.previous;
 

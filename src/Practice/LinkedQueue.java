@@ -50,7 +50,7 @@ public final class LinkedQueue<T> implements QueueInterface<T> {
 	} 
 
 	public T dequeue() {
-		T front = getFront(); // Might throw EmptyQueueException
+		T front = getFront(); // Might throw Homework.EmptyQueueException
 							// Assertion: firstNode != null
 		firstNode.data = null;
 		firstNode = firstNode.next;
