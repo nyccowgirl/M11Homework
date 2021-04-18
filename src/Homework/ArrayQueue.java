@@ -109,8 +109,15 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 
 
    	public T getSecond() {
-		// YOUR EXTRA CREDIT CODE HERE!
-   		return null; // placeholder: replace with your own code
+		if (isEmpty() || frontIndex == backIndex) {	// if queue is empty or has 1 entry
+			throw new EmptyQueueException();
+		} else {
+			if (frontIndex == queue.length - 1) { 	// if frontIndex is last index in array
+				return queue[0];
+			} else {
+				return queue[frontIndex + 1];
+			}
+		}
 	}
 	
 	

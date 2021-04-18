@@ -49,8 +49,7 @@ public class HomeworkM11Driver {
 		// test to make sure that the chains aren't actually "hooked together" but that the actual elements are spliced to q1
 		testLinkedSpliceConnected();
 
-		// UN-COMMENT THIS SECTION TO TEST EXTRA CREDIT	   
-		/*
+		// UN-COMMENT THIS SECTION TO TEST EXTRA CREDIT
 		System.out.println("\n\n*******************************TESTING GETSECOND IN LINKEDQUEUE*******************************");
 		// parameter 1: the contents of Q1, listed front to back
 		// parameter 2: if included, this is the expected result of invoking getSecond;
@@ -78,7 +77,6 @@ public class HomeworkM11Driver {
 		//   front index > back index
 		//   front index == array.length-1
 		testArrayGetSecondSpecialCases();
-	*/
 	}		
 
 	// note: don't worry about generics here; i've omitted them and suppressed the
