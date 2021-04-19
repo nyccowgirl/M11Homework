@@ -6,10 +6,16 @@ public class ListDequeTester {
 		ListDeque<String> wordDeque = new ListDeque<String>();
 		
 		printDeque(wordDeque);
+//		wordDeque.removeFront();				// to test exception handling
+//		wordDeque.removeBack();					// to test exception handling
+//		wordDeque.getFront();					// to test exception handling
+//		wordDeque.getBack();					// to test exception handling
 		wordDeque.addToBack("amps");
 		printDeque(wordDeque);
 		wordDeque.addToBack("bank");
 		printDeque(wordDeque);
+		System.out.println("front: " + wordDeque.getFront());
+		System.out.println("back: " + wordDeque.getBack());
 		wordDeque.addToFront("card");
 		printDeque(wordDeque);
 		wordDeque.addToFront("door");
