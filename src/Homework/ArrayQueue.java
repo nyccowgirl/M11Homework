@@ -102,8 +102,10 @@ public class ArrayQueue<T> implements QueueInterface<T> {
    	public void splice(ArrayQueue<T> anotherQueue) {
 		int anotherLength = anotherQueue.queue.length;
 
-		for (int i = anotherQueue.frontIndex; i != ((anotherQueue.backIndex + 1) % anotherLength); i = (i+1) % anotherLength) {
-			enqueue(anotherQueue.queue[i]);
+		if (!anotherQueue.isEmpty()) {
+			for (int i = anotherQueue.frontIndex; i != ((anotherQueue.backIndex + 1) % anotherLength); i = (i+1) % anotherLength) {
+				enqueue(anotherQueue.queue[i]);
+			}
 		}
    	}
 
